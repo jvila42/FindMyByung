@@ -104,7 +104,7 @@ iframe {
     margin-left: 62.5%;
 }
 
-.video {
+.player {
     display: inline-block;
 }
 
@@ -265,3 +265,4 @@ article {
 * html #menu-bar {
   height: 1%;
 }
+
