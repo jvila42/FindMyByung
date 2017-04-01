@@ -91,8 +91,8 @@ pre {
 
 iframe {
 	margin-left: 3em;
-        height: 30em;
-        width: 40em;
+    height: 30em;
+    width: 40em;
 }
 
 .jumbotron {
@@ -102,8 +102,10 @@ iframe {
 	text-shadow: 1px, 1px black;
     
 }
-.container{
-	
+
+.lecNotes {
+    display: inline;
+    margin-left: 62.5%;
 }
 
 .player {
@@ -116,10 +118,8 @@ iframe {
 
 textarea {
     width: 25em;
-    height: 50em;
+    height: 30em;
     overflow: scroll;
-    height: 70em;
-    margin-left: 5em;
     font-size: 1.5em; 
 }
 
