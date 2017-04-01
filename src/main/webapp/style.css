@@ -81,6 +81,7 @@ th, td {
 	text-align: right;
 	border-right: 1px solid #000;
 	width: 30%;
+	
 }
 
 pre {
@@ -99,7 +100,7 @@ iframe {
     background-color: #CB3535;
     position: relative;
     border:solid;
-	text-shadow: 1px, 1px black;
+	text-shadow: 12px, 12px 3px black;
     
 }
 
@@ -124,7 +125,7 @@ textarea {
 }
 
 article {
-    background-color: #b2d23e;
+    background-color: #FBFFFE;
 }
 
 #menu-bar {
