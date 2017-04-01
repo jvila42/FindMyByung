@@ -110,17 +110,14 @@ iframe {
 
 .notes {
     display: inline-block;
-    position: absolute;
 }
 
 textarea {
     width: 25em;
     height: 50em;
-    position: absolute;
     overflow: scroll;
     margin-left: 5em;
-    font-size: 1.5em;
-    
+    font-size: 1.5em; 
 }
 
 article {
@@ -272,5 +269,7 @@ article {
 }
 
 .flexcontainer {
-	justify-content: space-between;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: nowrap;
 }
