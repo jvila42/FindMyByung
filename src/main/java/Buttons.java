@@ -16,10 +16,8 @@ public class Buttons {
             spt.method1();
         } else if (request.getParameter("button2") != null) {
             spt.method2();
-        } else if (request.getParameter("button3") != null) {
-            spt.method3();
-        } else {
-            // ???
+        }
+        else {
         }
         request.getRequestDispatcher("/WEB-INF/some-result.jsp").forward(request, response);
     }	

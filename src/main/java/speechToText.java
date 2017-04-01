@@ -5,10 +5,5 @@ public class speechToText {
 	
 	public void method2(){
 		
-	}
-	
-	public void method3(){
-		
-	}
-	
+	}	
 }
