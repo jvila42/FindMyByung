@@ -111,10 +111,12 @@ iframe {
 
 .player {
     display: inline-block;
+    float: left;
 }
 
 .notes {
     display: inline-block;
+    margin-left: 5em;
 }
 
 textarea {
