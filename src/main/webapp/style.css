@@ -97,12 +97,13 @@ iframe {
 .jumbotron {
     background-color: #CB3535;
     position: relative;
+    border:solid;
+	text-shadow: 1px, 1px black;
+	/*Change */
     
 }
 .container{
-	border:solid;
-	text-shadow: 1px, 1px black;
-	/*Change */
+	
 }
 textarea {
     width: 25em;
