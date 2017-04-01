@@ -273,7 +273,7 @@ article {
 	margin-left: 3em;
 }
 
-.flexcontainer {
+#flexcontainer {
 	justify-content: space-around;
 	flex-direction: row;
 	flex-wrap: nowrap;
