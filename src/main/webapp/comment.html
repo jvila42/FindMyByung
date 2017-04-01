@@ -1,0 +1,37 @@
+<html>
+<body>
+
+<p>Please clap.</p>
+
+<form id='comment' action="javascript:void('');" class='add_comment'>
+	<label>Name
+	<input type='string' name='name'>
+	</label><br>
+	
+	<label>Comment
+	<textarea name='Comment'></textarea>
+	</label>
+	
+	<input type='submit' value="Add Comment" onclick="insert()">
+</form>
+
+<script type="text/javascript">
+	$(function(){
+		$("comment").submit(function(e) {
+			var data ={};
+			data.name=$("name").val();
+			data.comment=$('Comment').val();
+			
+			//Remember to change url 
+	        var url = "file:///Users/josevila/git/FindMyByung/src/main/webapp/comment.html";
+			
+			$.POST(url, data)
+			.done(function(response){
+				$("comment").append(response);
+			});
+			e.preventDefault();
+		});
+	});
+</script>
+</body>
+</html>
