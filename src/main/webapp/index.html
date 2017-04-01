@@ -66,6 +66,7 @@
 			<div id="display"></div>
 		
 			<script type="text/javascript">
+				new Date()
 				var titles = [];
 				var titleInput = document.getElementById("title");
 				var messageBox = document.getElementById("display");
@@ -88,6 +89,7 @@
 				function clearAndShow() {
 					titleInput.value = "";
 					messageBox.innerHTML = "";
+					messageBox.innerHTML = Date.prototype.getDate();
 					messageBox.innerHTML += " " + titles.join("<br/> ")
 							+ "<br/>";
 				}
