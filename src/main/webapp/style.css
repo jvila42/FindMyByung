@@ -93,11 +93,13 @@ iframe {
 }
 
 .jumbotron {
-    background-color: #ffd416;
+
+    background-color: #CB3535;
     position: relative;
     padding-left: 2em;
     
 }
+
 
 .lecNotes {
     display: inline;
