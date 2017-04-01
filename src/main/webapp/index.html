@@ -18,142 +18,135 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<meta name="description" content="">
-<meta name="author"
-	content="Sam, Kyle, Jose, Jose, David, Ramy, Chris, Collin">
-<link rel="icon" href="./images/bluemix_icon.png">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="Sam, Kyle, Jose, Jose, David, Ramy, Chris, Collin">
+    <link rel="icon" href="./images/bluemix_icon.png">
 
-<title>RallyHUB</title>
+    <title>RallyHUB</title>
 
-<!-- Bootstrap core CSS -->
-<link href="style.css" rel="stylesheet">
 
-</head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="http://blueimp.github.com/jQuery-File-Upload/js/vendor/jquery.ui.widget.js"></script>
+	<script src="http://blueimp.github.com/jQuery-File-Upload/js/jquery.fileupload.js"></script>
+
+    <link href="style.css" rel="stylesheet">
+
+  </head>
 <body>
 
+<article>
 
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>RallyHUB</h1>
+        <p>
 
-	<!-- Main jumbotron for a primary marketing message or call to action -->
-	<div class="jumbotron">
-		<div class="container">
-			<h1>RallyHUB</h1>
-			<p>Here is the ideal UVM Lecture space.</p>
+        Here is the ideal UVM Lecture space.
 
-		</div>
-	</div>
-	<iframe width="420" height="315"
-		src="https://www.youtube.com/embed/H6k7_CEc7QI"> </iframe>
+        </p>
 
-	<div class="comment">
-		<!-- where the comment creation form will be -->
-		<div class="col-md-4">
-			<h2>Leave a Comment</h2>
-	
-				Name:<br> <input type="text" name="userId" value="anonymous"><br>
-				<br> Related Video Time:<br> <input type="text"
-					name="videoTime" value="N/A"><br>
-				<br>
+      </div>
+    </div>
 
-				<textarea id="title" type="text" name="message" rows="10" cols="50" onkeyup="Allow()">
-                        Type your comment.
-			</textarea>
-				<br> <input type="submit" value="Post" onclick="insert()">
-			<div id="display"></div>
-		
-			<script type="text/javascript">
-				new Date()
-				var titles = [];
-				var titleInput = document.getElementById("title");
-				var messageBox = document.getElementById("display");
+	<h2 class="lecNotes">Lecture Notes</h2>
+    
+    <div id="player">
+    	<iframe id="UstreamIframe" width="420" height="315"
+    	src="https://www.youtube.com/embed/H6k7_CEc7QI">
+    	</iframe>
+    	</div>
 
-				function Allow() {
-					if (!user.title.value.match(/[a-zA-Z]$/)
-							&& user.title.value != "") {
-						user.title.value = "";
-						alert("Please Enter only alphabets");
-					}
-
-					window.location.reload()
-				}
-
-				function insert() {
-					titles.push(titleInput.value);
-					clearAndShow();
-				}
-
-				function clearAndShow() {
-					titleInput.value = "";
-					messageBox.innerHTML = "";
-					messageBox.innerHTML = Date.;
-					messageBox.innerHTML += " " + titles.join("<br/> ")
-							+ "<br/>";
-				}
-			</script>
-		</div>
-	</div>
-
-	<textarea rows="4" cols="50">
+    <div class="notes">
+    <textarea rows="4" cols="50">
     Watson Speech to Text will be used here to implement speech to text. 
     </textarea>
+    </div>
 
 	<div class="container">
-		<!-- An example row of columns -->
-		<div class="row">
-			<div class="col-md-4">
-				<h2>Example Course</h2>
-				<p>April 1st, 2017.</p>
-				<p>
-					<a class="btn btn-default" href="todos.jsp" role="button">View
-						database page &raquo;</a>
-				</p>
-			</div>
-			<div class="col-md-4">
-				<h2></h2>
-				<p></p>
-				<p>
-					<a class="btn btn-default" href="image.jsp" role="button">Analyze
-						Images &raquo;</a>
-				</p>
-			</div>
-		</div>
-
-		<hr>
-
-		<footer>
-			<p>&copy; 2017 IBM Corporation</p>
-			<p>
-				<a target="_blank"
-					href="https://console.ng.bluemix.net/devops/setup/deploy/?repository=https%3A%2F%2Fgithub.com%2Fjconallen%2FJava-MySQL-Hackathon-Example">
-					<button type="submit" class="btn btn-primary">
-						<img style="width: 20px; height: 20px;"
-							src="./images/IBM_Bluemix_logo.svg.png"> Deploy to Bluemix
-						Toolchain
-					</button>
-				</a>
-			</p>
-		</footer>
+      <!-- An example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Example Course</h2>
+          <p>
+          April 1st, 2017.  
+          </p>
+         <!-- <p><a class="btn btn-default" href="todos.jsp" role="button">View database page &raquo;</a></p> -->
+        </div>
+        <div class="col-md-4">
+          
+          </p>
+          <!--  <p><a class="btn btn-default" href="image.jsp" role="button">Analyze Images &raquo;</a></p>-->
+       </div>
+      </div>
+      
+      <div class="comment">
+      <!-- where the comment creation form will be -->
+          	<h2>Leave a Comment</h2>
+    
+            Name:<br> <input type="text" name="userId" value="anonymous"><br><br>
+            Related Video Time:<br> <input type="text" name="videoTime" value="N/A"><br><br>
+            Comment:<br><input id="title" type="text" name="message" value="Type Comment Here" onkeyup="Allow()"><br>
+            
+            <input type="submit" value="Post" onclick="insert()">
+            <div id="display"></div>
+        
+            <script type="text/javascript">
+                var titles = [];
+                var titleInput = document.getElementById("title");
+                var messageBox = document.getElementById("display");
+                function Allow() {
+                    if (!user.title.value.match(/[a-zA-Z]$/)
+                            && user.title.value != "") {
+                        user.title.value = "";
+                        alert("Please Enter only alphabets");
+                    }
+                    window.location.reload()
+                }
+                function insert() {
+                    titles.push(titleInput.value);
+                    clearAndShow();
+                }
+                function clearAndShow() {
+                    titleInput.value = "";
+                    messageBox.innerHTML = "";
+                    messageBox.innerHTML += " " + titles.join("<br/> ")
+                            + "<br/>";
+                }
+            </script>
 	</div>
-	<!-- /container -->
+	
 
+      <hr>
 
+      <footer>
+        <p>&copy; 2017 IBM Corporation</p>
+        <p>
+        <a target="_blank" href="https://console.ng.bluemix.net/devops/setup/deploy/?repository=https%3A%2F%2Fgithub.com%2Fjconallen%2FJava-MySQL-Hackathon-Example">
+        <button type="submit" class="btn btn-primary">
+        	<img style="width:20px;height:20px;" src="./images/IBM_Bluemix_logo.svg.png">
+  			Deploy to Bluemix Toolchain
+		</button>
+		</a>
+        </p>
+      </footer>
+    </div> <!-- /container -->
+
+	
 	<!-- Bootstrap core JavaScript
     ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script>
-		window.jQuery
-				|| document
-						.write('<script src="./js/vendor/jquery.min.js"><\/script>')
-	</script>
-	<script src="./js/bootstrap.min.js"></script>
-	<script src="./js/youtube_api_upload_video.js"></script>
-	<script src="./js/custom.js"></script>
-</body>
-</body>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/youtube_api_upload_video.js"></script>
+    <script src="./js/custom.js"></script>
+    </article>
+  </body>
+
 </html>
