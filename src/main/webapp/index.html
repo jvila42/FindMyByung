@@ -33,7 +33,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script src="http://blueimp.github.com/jQuery-File-Upload/js/vendor/jquery.ui.widget.js"></script>
 	<script src="http://blueimp.github.com/jQuery-File-Upload/js/jquery.fileupload.js"></script>
-    
+
     <link href="style.css" rel="stylesheet">
 
   </head>
@@ -54,6 +54,7 @@
 	<h2 class="lecNotes">Lecture Notes</h2>
       </div>
     </div>
+
     <div ng-controller='TestCtrl'>
   <div>
       <input id="fileupload" type="file" name="files[]" data-url="/" multiple>
@@ -69,9 +70,12 @@
     	<iframe id="UstreamIframe" width="420" height="315"
     	src="https://www.youtube.com/embed/H6k7_CEc7QI">
     	</iframe>
+
+    <div class="notes">
     <textarea rows="4" cols="50">
     Watson Speech to Text will be used here to implement speech to text. 
     </textarea>
+    </div>
 
 	<div class="container">
       <!-- An example row of columns -->
@@ -81,11 +85,12 @@
           <p>
           April 1st, 2017.  
           </p>
-          <p><a class="btn btn-default" href="todos.jsp" role="button">View database page &raquo;</a></p>
+         <!-- <p><a class="btn btn-default" href="todos.jsp" role="button">View database page &raquo;</a></p> -->
         </div>
         <div class="col-md-4">
           
-          <p><a class="btn btn-default" href="image.jsp" role="button">Analyze Images &raquo;</a></p>
+          </p>
+          <!--  <p><a class="btn btn-default" href="image.jsp" role="button">Analyze Images &raquo;</a></p>-->
        </div>
       </div>
       
