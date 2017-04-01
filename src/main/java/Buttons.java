@@ -13,9 +13,9 @@ public class Buttons {
         speechToText spt = new speechToText();
 
         if (request.getParameter("button1") != null) {
-            spt.method1();
+            spt.convertToText();
         } else if (request.getParameter("button2") != null) {
-            spt.method2();
+
         }
         else {
         }
