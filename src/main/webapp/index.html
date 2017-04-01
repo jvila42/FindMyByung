@@ -84,7 +84,12 @@
     	src="https://www.youtube.com/embed/H6k7_CEc7QI">
     	</iframe>
     	</div>
-
+	<button type="button" name="Translate">Translate Lecture to Text</button>
+	
+	<form action="${pageContext.request.contextPath}/myservlet" method="post">
+    	<input type="submit" name="button1" value="Button 1" />
+	</form>
+	
     <div class="notes">
     <textarea rows="4" cols="50">
     Watson Speech to Text will be used here to implement speech to text. 
