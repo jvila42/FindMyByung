@@ -18,118 +18,140 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="Jim Conallen">
-    <link rel="icon" href="./images/bluemix_icon.png">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author"
+	content="Sam, Kyle, Jose, Jose, David, Ramy, Chris, Collin">
+<link rel="icon" href="./images/bluemix_icon.png">
 
-    <title>Java MySQL Hackathon Example - Home</title>
+<title>RallyHUB</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="style.css" rel="stylesheet">
 
-  </head>
+</head>
 <body>
 
 
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>RallyHUB</h1>
-        <p>
-        This page is based off the <a href="http://getbootstrap.com/examples/jumbotron/">Jumbotron Bootstrap template</a>.
-        It is useful for a big opening splash of a home page.
-        </p>
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="jumbotron">
+		<div class="container">
+			<h1>RallyHUB</h1>
+			<p>Here is the ideal UVM Lecture space.</p>
 
-      </div>
-    </div>
+		</div>
+	</div>
+	<iframe width="420" height="315"
+		src="https://www.youtube.com/embed/H6k7_CEc7QI"> </iframe>
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>MySQL TODO List</h2>
-          <p>
-          This is a simple TODO list that uses a MySQL database to store items in.  
-          </p>
-          <p><a class="btn btn-default" href="todos.jsp" role="button">View database page &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Watson Image Analysis</h2>
-          <p>
-          This application uses the Watson Visual Recognition service to analyze images that you upload.  It will 
-          also attempt facial recognition, identifying known personalities.
-          </p>
-          <p><a class="btn btn-default" href="image.jsp" role="button">Analyze Images &raquo;</a></p>
-       </div>
-      </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2017 IBM Corporation</p>
-        <p>
-        <a target="_blank" href="https://console.ng.bluemix.net/devops/setup/deploy/?repository=https%3A%2F%2Fgithub.com%2Fjconallen%2FJava-MySQL-Hackathon-Example">
-        <button type="submit" class="btn btn-primary">
-        	<img style="width:20px;height:20px;" src="./images/IBM_Bluemix_logo.svg.png">
-  			Deploy to Bluemix Toolchain
-		</button>
-		</a>
-        </p>
-      </footer>
-    </div> <!-- /container -->
-    
-    //JOSE'S STUFF PLS DONUT STEAL
-    <p>Pls Clap</p>
-
-<textarea id="title" type="text "rows="10" cols="20" onkeyup="Allow()" ></textarea>
-<input type="submit" value="POST COMMENT" onclick="insert()" /></form>
-<div id="display"></div>
-
-
-<script type="text/javascript">
-
-var titles = [];
-var titleInput = document.getElementById("title");
-var messageBox = document.getElementById("display");
-
-function Allow()
-{
-if (!user.title.value.match(/[a-zA-Z]$/) && user.title.value !="")
-{
-user.title.value="";
-alert("Please Enter only alphabets");
-}
-
-window.location.reload()
-}
-
-function insert () {
-titles.push(titleInput.value);
-clearAndShow();
-}
-
-function clearAndShow () 
-{
-titleInput.value = "";
-messageBox.innerHTML = "";
-messageBox.innerHTML += " " + titles.join("<br/> ") + "<br/>";
-}
-
-</script>
-
+	<div class="comment">
+		<!-- where the comment creation form will be -->
+		<div class="col-md-4">
+			<h2>Leave a Comment</h2>
 	
+				Name:<br> <input type="text" name="userId" value="anonymous"><br>
+				<br> Related Video Time:<br> <input type="text"
+					name="videoTime" value="N/A"><br>
+				<br>
+
+				<textarea id="title" type="text" name="message" rows="10" cols="50" onkeyup="Allow()">
+                        Type your comment.
+			</textarea>
+				<br> <input type="submit" value="Post" onclick="insert()">
+			<div id="display"></div>
+		
+			<script type="text/javascript">
+				var titles = [];
+				var titleInput = document.getElementById("title");
+				var messageBox = document.getElementById("display");
+
+				function Allow() {
+					if (!user.title.value.match(/[a-zA-Z]$/)
+							&& user.title.value != "") {
+						user.title.value = "";
+						alert("Please Enter only alphabets");
+					}
+
+					window.location.reload()
+				}
+
+				function insert() {
+					titles.push(titleInput.value);
+					clearAndShow();
+				}
+
+				function clearAndShow() {
+					titleInput.value = "";
+					messageBox.innerHTML = "";
+					messageBox.innerHTML += " " + titles.join("<br/> ")
+							+ "<br/>";
+				}
+			</script>
+		</div>
+	</div>
+
+	<textarea rows="4" cols="50">
+    Watson Speech to Text will be used here to implement speech to text. 
+    </textarea>
+
+	<div class="container">
+		<!-- An example row of columns -->
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Example Course</h2>
+				<p>April 1st, 2017.</p>
+				<p>
+					<a class="btn btn-default" href="todos.jsp" role="button">View
+						database page &raquo;</a>
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h2></h2>
+				<p></p>
+				<p>
+					<a class="btn btn-default" href="image.jsp" role="button">Analyze
+						Images &raquo;</a>
+				</p>
+			</div>
+		</div>
+
+		<hr>
+
+		<footer>
+			<p>&copy; 2017 IBM Corporation</p>
+			<p>
+				<a target="_blank"
+					href="https://console.ng.bluemix.net/devops/setup/deploy/?repository=https%3A%2F%2Fgithub.com%2Fjconallen%2FJava-MySQL-Hackathon-Example">
+					<button type="submit" class="btn btn-primary">
+						<img style="width: 20px; height: 20px;"
+							src="./images/IBM_Bluemix_logo.svg.png"> Deploy to Bluemix
+						Toolchain
+					</button>
+				</a>
+			</p>
+		</footer>
+	</div>
+	<!-- /container -->
+
+
 	<!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="./js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="./js/bootstrap.min.js"></script>
-  </body>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		window.jQuery
+				|| document
+						.write('<script src="./js/vendor/jquery.min.js"><\/script>')
+	</script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/youtube_api_upload_video.js"></script>
+	<script src="./js/custom.js"></script>
+</body>
 </body>
 </html>
