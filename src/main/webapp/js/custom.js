@@ -2,12 +2,28 @@
  * Main page of JS for the page
  */
 
+function show1() {
+	document.getElementsByClass("1").style.display = "block";
+}
+function show2() {
+	document.getElementsByClass("2").style.display = "block";
+}
+function show3() {
+	document.getElementsByClass("3").style.display = "block";
+}
+function show4() {
+	document.getElementsByClass("4").style.display = "block";
+}
+function show5() {
+	document.getElementsByClass("5").style.display = "block";
+}
+
 //var viewer = UstreamEmbed('UstreamIframe');
 
 // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
-      //tag.src = "https://www.youtube.com/iframe_api";
+     // tag.src = "https://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 

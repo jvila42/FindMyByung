@@ -276,3 +276,7 @@ article {
 	flex-direction: row;
 	flex-wrap: nowrap;
 }
+
+.1, .2, .3, .4, .5{
+	display: none;
+}
