@@ -69,23 +69,6 @@
   </div>
 </div>
     
-    
-    <div class="comment">
-      <!-- where the comment creation form will be -->
-          <h2>Leave a Comment</h2>
-          <form>
-          	Name:<br>
-  			<input type="text" name="userId" value="anonymous"><br><br>
-  			
-  			Related Video Time:<br>
-  			<input type="text" name="videoTime" value="N/A"><br><br>
-			
-			<input type="text" name="textComment" value="Type comment here"><br><br>  
-			
-			<input type="submit" value="Post">       
-          
-          </form>
-      </div>
     <div id="player"></div>
     	<iframe id="UstreamIframe" width="420" height="315"
     	src="https://www.youtube.com/embed/H6k7_CEc7QI">
@@ -112,6 +95,46 @@
           <p><a class="btn btn-default" href="image.jsp" role="button">Analyze Images &raquo;</a></p>
        </div>
       </div>
+      
+      <div class="comment">
+      <!-- where the comment creation form will be -->
+          <h2>Leave a Comment</h2>
+    
+                Name:<br> <input type="text" name="userId" value="anonymous"><br>
+                <br> Related Video Time:<br> <input type="text"
+                    name="videoTime" value="N/A"><br>
+                <br>
+                <textarea id="title" type="text" name="message" rows="10" cols="50" onkeyup="Allow()">
+                        Type your comment.
+            </textarea>
+                <br> <input type="submit" value="Post" onclick="insert()">
+            <div id="display"></div>
+        
+            <script type="text/javascript">
+                var titles = [];
+                var titleInput = document.getElementById("title");
+                var messageBox = document.getElementById("display");
+                function Allow() {
+                    if (!user.title.value.match(/[a-zA-Z]$/)
+                            && user.title.value != "") {
+                        user.title.value = "";
+                        alert("Please Enter only alphabets");
+                    }
+                    window.location.reload()
+                }
+                function insert() {
+                    titles.push(titleInput.value);
+                    clearAndShow();
+                }
+                function clearAndShow() {
+                    titleInput.value = "";
+                    messageBox.innerHTML = "";
+                    messageBox.innerHTML += " " + titles.join("<br/> ")
+                            + "<br/>";
+                }
+            </script>
+	</div>
+	
 
       <hr>
 
